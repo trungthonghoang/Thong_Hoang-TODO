@@ -2,7 +2,7 @@
 
 ## TODO list
 
-Met deze TODO app kan je een noteren welke taken je nog moet doen en verwijderen na afronding.
+Middels deze TODO app is het mogelijk om een lijst samen te stellen van taken en die na afronding weer te verwijderen.
 
 ### Project doel
 
