@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  background-color: #faf3ec;
+}
+
+header {
+  font-size: 1.4rem;
+  color: #2d4f1e;
+}
+
+header,
+form {
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  background: white;
+}
+
+form button {
+  color: #746b60;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+
+form button:hover {
+  background: #746b60;
+  color: white;
+}
+
+#tasksContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tasksList {
+  min-width: 70%;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  background: white;
+  color: black;
+  padding-left: 10px;
+}
+
+.task li li {
+  flex: 1;
+}
+
+.deleteBtn {
+  background: #c74230;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  cursor: pointer;
+}
+.deleteBtn i {
+  pointer-events: none;
+}
+
+@media only screen and (min-width: 800px) {
+  #tasksList {
+    min-width: 40%;
+  }
+}/*# sourceMappingURL=styles.css.map */
