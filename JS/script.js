@@ -12,9 +12,17 @@ const showTasks = async () => {
     const newLi = document.createElement("li");
     newLi.innerHTML = task.description;
     newLi.classList.add("task");
+    newLi.setAttribute("id", task.id);
 
     const removeButton = document.createElement("button");
     removeButton.classList.add("deleteBtn");
+
+    removeButton.addEventListener("click", function () {
+      removeDataFromApi(task.id);
+      console.log("task id ", task.id);
+      document.getElementById(task.id).remove();
+    });
+
     removeButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
     removeButton.value = task.id;
 
@@ -43,24 +51,11 @@ const addTask = async () => {
   }
 };
 
-const removeTask = async (id) => {
-  console.log("The ID of the post you want to delete:", id);
-  if (id != "") {
-    await removeDataFromApi(id);
-  }
-};
-
 // Eventlisteners
 addTaskBtn.addEventListener("click", addTask);
+
 addTaskBtn.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     addTask();
-  }
-});
-
-document.body.addEventListener("click", function (event) {
-  if (event.target.className === "deleteBtn") {
-    const id = event.target.value;
-    removeTask(id);
   }
 });
